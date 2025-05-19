@@ -6,11 +6,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Sparkles } from "lucide-react";
+import {  Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative overflow-hidden py-20 md:py-32 flex-col flex justify-center items-center">
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl opacity-70"></div>
@@ -28,7 +28,8 @@ export function HeroSection() {
               >
                 <Button variant="outline" className="rounded-full">
                   <Sparkles className="mr-2 h-4 w-4" />
-                  <span>AI-Powered Creative Suite</span>
+                  {/* <span>AI-Powered Creative Suite</span> */}
+                  <span>強力な画像生成ツール</span>
                 </Button>
               </motion.div>
               <motion.h1
@@ -49,8 +50,9 @@ export function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="max-w-[600px] text-muted-foreground md:text-xl"
               >
-                Generate images, remove backgrounds, compress files, and more with our
-                intuitive platform designed for creators, marketers, and businesses.
+                {/* Generate images, remove backgrounds, compress files, and more with our
+                intuitive platform designed for creators, marketers, and businesses. */}
+                画像生成、背景削除、トリミング、圧縮ありとあらゆる加工をこのサービス一つで迅速に行えます。
               </motion.p>
             </div>
             <motion.div
@@ -60,18 +62,19 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-3"
             >
               <div className="flex-1 max-w-sm space-y-2">
-                <Input 
-                  type="email" 
-                  placeholder="Enter your email" 
+                <Input
+                  type="email"
+                  placeholder="メールアドレスを入力"
                   className="h-12 rounded-lg"
                 />
                 <p className="text-xs text-muted-foreground">
-                  Start with 50 free credits. No credit card required.
+                  FREEユーザーに登録で5クレジットプレゼント‼
                 </p>
               </div>
               <Button size="lg" className="h-12 px-8">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-4 w-4" />
+                
+                  
+                
               </Button>
             </motion.div>
             <motion.div
@@ -96,7 +99,8 @@ export function HeroSection() {
                 ))}
               </div>
               <div className="text-muted-foreground">
-                <span className="font-medium text-foreground">4.9/5</span> from over 1,000+ reviews
+                <span className="font-medium text-foreground">4.9/5</span> from
+                over 1,000+ reviews
               </div>
             </motion.div>
           </div>
@@ -117,7 +121,9 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-20"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
                 <div className="bg-background/30 backdrop-blur-md p-4 rounded-lg border border-white/10">
-                  <p className="text-sm font-medium text-foreground">Try: &quot;A futuristic cityscape with flying cars and neon lights&quot;</p>
+                  <p className="text-sm font-medium text-foreground">
+                    Try: &quot;綺麗な星空をお願い。&quot;
+                  </p>
                 </div>
               </div>
             </div>

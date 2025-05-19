@@ -51,7 +51,7 @@ export function FeaturesSection() {
   const [activeFeature, setActiveFeature] = React.useState(features[0].id);
 
   return (
-    <section id="features" className="py-24 bg-muted/50">
+    <section id="features" className="py-24 bg-muted/50 flex-col flex justify-center items-center">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

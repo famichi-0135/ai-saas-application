@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 
 export function CtaSection() {
   return (
-    <section id="cta" className="py-24 relative overflow-hidden">
+    <section id="cta" className="py-24 relative overflow-hidden flex-col flex justify-center items-center">
       {/* Background decorations */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full filter blur-3xl opacity-50"></div>

@@ -63,7 +63,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-muted/30 flex-col flex justify-center items-center">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

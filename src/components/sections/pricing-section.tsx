@@ -99,7 +99,7 @@ export function PricingSection() {
   const [billingCycle, setBillingCycle] = React.useState<"monthly" | "annually">("monthly");
 
   return (
-    <section id="pricing" className="py-24">
+    <section id="pricing" className="py-24 flex-col flex justify-center items-center">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -46,7 +46,7 @@ export function RecentSalesTable() {
           </TableHeader>
           <TableBody>
             {salesData.slice(0, 5).map((sale) => ( // 表示件数を制限
-              <TableRow key={sale.email}>
+              (<TableRow key={sale.email}>
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <Avatar className="h-9 w-9">
@@ -62,7 +62,7 @@ export function RecentSalesTable() {
                   </div>
                 </TableCell>
                 <TableCell className="text-right font-medium">{sale.amount}</TableCell>
-              </TableRow>
+              </TableRow>)
             ))}
           </TableBody>
         </Table>

@@ -47,8 +47,8 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section id="faq" className="py-24 bg-muted/30">
-      <div className="container px-4 md:px-6 max-w-4xl">
+    <section id="faq" className="py-24 bg-muted/30 flex-col flex justify-center items-center">
+      <div className=" px-4 md:px-6 max-w-4xl container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

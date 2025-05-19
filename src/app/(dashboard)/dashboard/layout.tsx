@@ -16,7 +16,7 @@ export default function DashBoardLayout({
           <MobileNav />
 
           <div className="w-full items-center flex">
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <h1 className="text-lg font-bold">AI Image Generator</h1>
             </Link>
             <div className="ml-auto  hidden md:block">
@@ -25,7 +25,6 @@ export default function DashBoardLayout({
           </div>
         </div>
       </header>
-
       {/* dashboard */}
       <div className=" md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
         {/* {sidebar} */}
@@ -40,8 +39,6 @@ export default function DashBoardLayout({
           {children}
         </main>
       </div>
-
-      
     </div>
   );
 }

@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { 
-  Sparkles, 
-  Instagram, 
-  Twitter, 
-  Facebook, 
-  Youtube, 
+import {
+  Sparkles,
+  Instagram,
+  Facebook,
+  Youtube,
   Github,
   ChevronUp,
 } from "lucide-react";
@@ -19,37 +18,64 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-muted/40 py-16 mt-auto">
+    <footer className="bg-muted/40 py-16 mt-auto flex-col flex justify-center items-center">
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <div className="sm:col-span-2 lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">Pixelcraft AI</span>
+            <Link
+              href="/"
+              className="flex items-center gap-2 mb-4"
+              legacyBehavior
+            >
+              <div>
+                <Sparkles className="h-6 w-6 text-primary" />
+                <span className="font-bold text-xl">Pixelcraft AI</span>
+              </div>
             </Link>
             <p className="text-muted-foreground max-w-xs mb-4">
-              Empower your creativity with AI-powered tools that help you create stunning visuals in minutes, not hours.
+              Empower your creativity with AI-powered tools that help you create
+              stunning visuals in minutes, not hours.
             </p>
             <div className="flex space-x-4">
-              <Link href="#instagram" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
+              <Link
+                href="#instagram"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                legacyBehavior
+              >
+                <div>
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </div>
               </Link>
-              <Link href="#twitter" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+              <Link
+                href="#facebook"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                legacyBehavior
+              >
+                <div>
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </div>
               </Link>
-              <Link href="#facebook" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
+              <Link
+                href="#youtube"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                legacyBehavior
+              >
+                <div>
+                  <Youtube className="h-5 w-5" />
+                  <span className="sr-only">YouTube</span>
+                </div>
               </Link>
-              <Link href="#youtube" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Youtube className="h-5 w-5" />
-                <span className="sr-only">YouTube</span>
-              </Link>
-              <Link href="#github" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+              <Link
+                href="#github"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                legacyBehavior
+              >
+                <div>
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </div>
               </Link>
             </div>
           </div>
@@ -57,27 +83,42 @@ export function Footer() {
             <h3 className="font-medium mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#features"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#pricing"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="#api" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#api"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   API
                 </Link>
               </li>
               <li>
-                <Link href="#integrations" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#integrations"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Integrations
                 </Link>
               </li>
               <li>
-                <Link href="#status" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#status"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Status
                 </Link>
               </li>
@@ -87,27 +128,42 @@ export function Footer() {
             <h3 className="font-medium mb-4">Resources</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#blog" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#blog"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#documentation" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#documentation"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="#tutorials" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#tutorials"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="#community" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#community"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Community
                 </Link>
               </li>
               <li>
-                <Link href="#help-center" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#help-center"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Help Center
                 </Link>
               </li>
@@ -117,27 +173,42 @@ export function Footer() {
             <h3 className="font-medium mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#careers" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#careers"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="#press" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#press"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Press
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#contact"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="#partners" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="#partners"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Partners
                 </Link>
               </li>
@@ -155,16 +226,28 @@ export function Footer() {
             © {new Date().getFullYear()} Pixelcraft AI. All rights reserved.
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link href="#terms" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="#terms"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Terms of Service
             </Link>
-            <Link href="#privacy" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="#privacy"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="#cookies" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="#cookies"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Cookie Policy
             </Link>
-            <Link href="#sitemap" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="#sitemap"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Sitemap
             </Link>
           </div>

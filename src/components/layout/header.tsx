@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { 
+import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -31,16 +31,26 @@ export function Header() {
   }, []);
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-md border-b" : "bg-transparent"
-    )}>
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-300 ",
+        isScrolled
+          ? "bg-background/80 backdrop-blur-md border-b"
+          : "bg-transparent"
+      )}
+    >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center space-x-2">
-              <Sparkles className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">Pixelcraft AI</span>
+            <Link
+              href="/"
+              className="flex items-center space-x-2"
+              legacyBehavior
+            >
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-6 w-6 text-primary" />
+                <span className="font-bold text-xl">AI-image-generator</span>
+              </div>
             </Link>
           </div>
 
@@ -143,7 +153,7 @@ function DesktopNav() {
 function MobileNav() {
   return (
     <div className="flex flex-col gap-6 pt-6">
-      <Link href="/" className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2" legacyBehavior>
         <Sparkles className="h-6 w-6 text-primary" />
         <span className="font-bold text-xl">Pixelcraft AI</span>
       </Link>
@@ -151,21 +161,65 @@ function MobileNav() {
         <div className="border-b pb-2">
           <h4 className="font-medium mb-1">Features</h4>
           <nav className="flex flex-col gap-2">
-            <Link href="#image-generation" className="text-muted-foreground hover:text-foreground transition-colors">AI Image Generation</Link>
-            <Link href="#background-removal" className="text-muted-foreground hover:text-foreground transition-colors">Background Removal</Link>
-            <Link href="#image-compression" className="text-muted-foreground hover:text-foreground transition-colors">Image Compression</Link>
-            <Link href="#editing-tools" className="text-muted-foreground hover:text-foreground transition-colors">Editing Tools</Link>
+            <Link
+              href="#image-generation"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              AI Image Generation
+            </Link>
+            <Link
+              href="#background-removal"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Background Removal
+            </Link>
+            <Link
+              href="#image-compression"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Image Compression
+            </Link>
+            <Link
+              href="#editing-tools"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Editing Tools
+            </Link>
           </nav>
         </div>
-        <Link href="#use-cases" className="font-medium">Use Cases</Link>
-        <Link href="#pricing" className="font-medium">Pricing</Link>
+        <Link href="#use-cases" className="font-medium">
+          Use Cases
+        </Link>
+        <Link href="#pricing" className="font-medium">
+          Pricing
+        </Link>
         <div className="border-b pb-2">
           <h4 className="font-medium mb-1">Resources</h4>
           <nav className="flex flex-col gap-2">
-            <Link href="#blog" className="text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
-            <Link href="#tutorials" className="text-muted-foreground hover:text-foreground transition-colors">Tutorials</Link>
-            <Link href="#api" className="text-muted-foreground hover:text-foreground transition-colors">API Documentation</Link>
-            <Link href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</Link>
+            <Link
+              href="#blog"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Blog
+            </Link>
+            <Link
+              href="#tutorials"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Tutorials
+            </Link>
+            <Link
+              href="#api"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              API Documentation
+            </Link>
+            <Link
+              href="#faq"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              FAQ
+            </Link>
           </nav>
         </div>
       </div>

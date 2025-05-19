@@ -159,7 +159,7 @@ function CompressionImage() {
           {/* submitbutton */}
           {isSignedIn ? (
             //完成し次第Buttonにdisabled={pending}を追加
-            <Button
+            (<Button
               type="submit"
               disabled={true}
               className={cn("w-full duration-200", pending && "bg-primary/80")}
@@ -172,7 +172,7 @@ function CompressionImage() {
                   画像を圧縮＆サイズの変更 (鋭意制作中)
                 </>
               )}
-            </Button>
+            </Button>)
           ) : (
             <SignInButton
               mode="modal"
@@ -187,7 +187,6 @@ function CompressionImage() {
           )}
         </form>
       </div>
-
       {/* image preview */}
       {state.processedImage && (
         <div className="space-y-4">

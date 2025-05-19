@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '5mb',
     },
   },
+  images: {
+    domains: ['i.pravatar.cc','images.pexels.com'],
+  },
 };
+
+
 
 export default nextConfig;
