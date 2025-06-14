@@ -16,7 +16,7 @@ export default function DashBoardLayout({
           <MobileNav />
 
           <div className="w-full items-center flex">
-            <Link href="/" legacyBehavior>
+            <Link href="/" >
               <h1 className="text-lg font-bold">AI Image Generator</h1>
             </Link>
             <div className="ml-auto  hidden md:block">

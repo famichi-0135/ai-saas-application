@@ -9,6 +9,7 @@ import { CtaSection } from '@/components/sections/cta-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { FaqSection } from '@/components/sections/faq-section';
 
+
 export default function Home() {
   return (
     <div className="relative w-full">

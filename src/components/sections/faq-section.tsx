@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { 
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -13,41 +13,52 @@ import {
 const faqs = [
   {
     question: "How does the credit system work?",
-    answer: "Credits are used for various operations in Pixelcraft AI. One credit is typically consumed for each image generation, while background removals and other operations may use different amounts. Free accounts start with 50 credits, and paid plans include monthly credit allowances that reset each billing cycle. You can also purchase additional credits as needed."
+    answer:
+      "Credits are used for various operations in Pixelcraft AI. One credit is typically consumed for each image generation, while background removals and other operations may use different amounts. Free accounts start with 50 credits, and paid plans include monthly credit allowances that reset each billing cycle. You can also purchase additional credits as needed.",
   },
   {
     question: "Can I use the generated images commercially?",
-    answer: "Yes! All images you create with Pixelcraft AI are yours to use for personal or commercial purposes. You retain full rights to the content you generate. However, please be aware of potential copyright or trademark issues if you create images that closely resemble existing protected works."
+    answer:
+      "Yes! All images you create with Pixelcraft AI are yours to use for personal or commercial purposes. You retain full rights to the content you generate. However, please be aware of potential copyright or trademark issues if you create images that closely resemble existing protected works.",
   },
   {
     question: "How accurate is the background removal tool?",
-    answer: "Our AI-powered background removal is highly accurate for most images, especially those with clear subjects. It works well with portraits, products, and objects with defined edges. Complex subjects like hair or transparent items may occasionally require minor touch-ups, which can be done using our editing tools."
+    answer:
+      "Our AI-powered background removal is highly accurate for most images, especially those with clear subjects. It works well with portraits, products, and objects with defined edges. Complex subjects like hair or transparent items may occasionally require minor touch-ups, which can be done using our editing tools.",
   },
   {
     question: "What image formats are supported?",
-    answer: "Pixelcraft AI supports all common image formats including JPG, PNG, WebP, and HEIF/HEIC. For the best quality results with background removal, we recommend using high-resolution images in PNG or JPG format. Generated images can be exported in various formats based on your needs."
+    answer:
+      "Pixelcraft AI supports all common image formats including JPG, PNG, WebP, and HEIF/HEIC. For the best quality results with background removal, we recommend using high-resolution images in PNG or JPG format. Generated images can be exported in various formats based on your needs.",
   },
   {
     question: "Is there a limit to image resolution?",
-    answer: "Free accounts can generate images up to 1024×1024 pixels. Starter plans support up to 2048×2048 pixels, while Professional and Enterprise plans allow for higher resolutions up to 4096×4096 pixels. Background removal works on images of any resolution across all plans, though processing time may vary."
+    answer:
+      "Free accounts can generate images up to 1024×1024 pixels. Starter plans support up to 2048×2048 pixels, while Professional and Enterprise plans allow for higher resolutions up to 4096×4096 pixels. Background removal works on images of any resolution across all plans, though processing time may vary.",
   },
   {
     question: "How do I cancel my subscription?",
-    answer: "You can cancel your subscription at any time from your account settings page. Navigate to Billing > Subscription and click 'Cancel Subscription'. Your access will continue until the end of your current billing period. We don't offer refunds for partial billing periods, but you're welcome to use the service until the subscription expires."
+    answer:
+      "You can cancel your subscription at any time from your account settings page. Navigate to Billing > Subscription and click 'Cancel Subscription'. Your access will continue until the end of your current billing period. We don't offer refunds for partial billing periods, but you're welcome to use the service until the subscription expires.",
   },
   {
     question: "Is there an API available for developers?",
-    answer: "Yes, Professional and Enterprise plans include API access that allows you to integrate Pixelcraft AI features directly into your applications, websites, or workflows. Our comprehensive API documentation includes examples for popular programming languages and frameworks. Enterprise plans offer additional API call volume and dedicated support."
+    answer:
+      "Yes, Professional and Enterprise plans include API access that allows you to integrate Pixelcraft AI features directly into your applications, websites, or workflows. Our comprehensive API documentation includes examples for popular programming languages and frameworks. Enterprise plans offer additional API call volume and dedicated support.",
   },
   {
     question: "What happens to my data and uploaded images?",
-    answer: "We take privacy seriously. Your uploaded images are stored securely and only used to provide the services you request. We do not use your images to train our models unless you explicitly opt in. You can delete your images at any time from your account. Please refer to our Privacy Policy for complete details on data handling."
+    answer:
+      "We take privacy seriously. Your uploaded images are stored securely and only used to provide the services you request. We do not use your images to train our models unless you explicitly opt in. You can delete your images at any time from your account. Please refer to our Privacy Policy for complete details on data handling.",
   },
 ];
 
 export function FaqSection() {
   return (
-    <section id="faq" className="py-24 bg-muted/30 flex-col flex justify-center items-center">
+    <section
+      id="faq"
+      className="py-24 bg-muted/30 flex-col flex justify-center items-center"
+    >
       <div className=" px-4 md:px-6 max-w-4xl container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

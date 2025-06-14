@@ -47,7 +47,8 @@ const features = [
   },
 ];
 
-export function FeaturesSection() {
+export function 
+FeaturesSection() {
   const [activeFeature, setActiveFeature] = React.useState(features[0].id);
 
   return (

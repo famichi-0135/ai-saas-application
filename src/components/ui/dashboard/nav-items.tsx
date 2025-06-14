@@ -17,7 +17,7 @@ export const NavItems = () => {
       className={cn("justify-start", pathname === item.href && "bg-accent")}
       asChild
       >
-        <Link href={item.href} legacyBehavior>
+        <Link href={item.href}>
         {item.icon && <item.icon className="h-4  w-4 mr-2"/>}
         {item.title}
         </Link>

@@ -1,4 +1,5 @@
 
+
 import PageContainer from "@/components/ui/dashboard/page-container";
 import PageHeader from "@/components/ui/dashboard/page-header";
 import ProfileSection from "@/components/ui/dashboard/settings/profile-section";
@@ -9,17 +10,20 @@ import React from "react";
 
 const SettingsPage = async () => {
   const user = await currentUser();
+  console.log("以下データなり");
+  console.log(user);
 
   if (!user) {
     return (
-      <div className="flex justify-center items-center my-auto mx-auto  rounded-lg lg:w-80 lg:h-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-        <div className="font-bold text-xl text-white ">
+      <div className="flex justify-center items-center my-auto mx-auto  rounded-lg lg:w-60 lg:h-15 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+        <div className="font-bold text-medium text-white ">
           ログインしてください
         </div>
       </div>
     );
   }
 
+  
   const dbUser = await prisma.user.findUnique({
     where: { clerkId: user.id },
     include: {
@@ -27,9 +31,24 @@ const SettingsPage = async () => {
     },
   });
 
+
+  console.log("以下DBuser");
   console.log(dbUser);
-  if (!dbUser || !dbUser.subscriptions?.stripeCurrentPeriodEnd) {
+  // if (!dbUser || !dbUser.subscriptions?.stripeCurrentPeriodEnd) {
+  //   throw new Error("ユーザーが見つかりませんでした。");
+  // }
+  if (!dbUser) {
     throw new Error("ユーザーが見つかりませんでした。");
+  }
+
+  if (dbUser.subscriptions?.stripeCurrentPeriodEnd == null) {
+    return (
+      <div className="flex justify-center items-center my-auto mx-auto  rounded-lg lg:w-80 lg:h-15 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+        <div className="font-bold text-medium text-white ">
+          サブスクリプションに登録してません。
+        </div>
+      </div>
+    );
   }
 
   return (

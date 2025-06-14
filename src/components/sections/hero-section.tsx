@@ -6,7 +6,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {  Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -71,10 +72,8 @@ export function HeroSection() {
                   FREEユーザーに登録で5クレジットプレゼント‼
                 </p>
               </div>
-              <Button size="lg" className="h-12 px-8">
-                
-                  
-                
+              <Button asChild size="lg" className="h-12 px-8">
+                <Link href="/dashboard">無料で始める</Link>
               </Button>
             </motion.div>
             <motion.div

@@ -42,11 +42,7 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Link
-              href="/"
-              className="flex items-center space-x-2"
-              legacyBehavior
-            >
+            <Link href="/" className="flex items-center space-x-2">
               <div className="flex items-center gap-2">
                 <Sparkles className="h-6 w-6 text-primary" />
                 <span className="font-bold text-xl">AI-image-generator</span>
@@ -113,14 +109,14 @@ function DesktopNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#use-cases" legacyBehavior passHref>
+          <Link href="#use-cases" passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Use Cases
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#pricing" legacyBehavior passHref>
+          <Link href="#pricing" passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Pricing
             </NavigationMenuLink>
@@ -153,7 +149,7 @@ function DesktopNav() {
 function MobileNav() {
   return (
     <div className="flex flex-col gap-6 pt-6">
-      <Link href="/" className="flex items-center gap-2" legacyBehavior>
+      <Link href="/" className="flex items-center gap-2">
         <Sparkles className="h-6 w-6 text-primary" />
         <span className="font-bold text-xl">Pixelcraft AI</span>
       </Link>
@@ -235,6 +231,8 @@ function MobileNav() {
   );
 }
 
+//
+// ListItem.tsx
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & {

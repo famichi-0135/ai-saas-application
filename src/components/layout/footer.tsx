@@ -22,11 +22,7 @@ export function Footer() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
           <div className="sm:col-span-2 lg:col-span-2">
-            <Link
-              href="/"
-              className="flex items-center gap-2 mb-4"
-              legacyBehavior
-            >
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div>
                 <Sparkles className="h-6 w-6 text-primary" />
                 <span className="font-bold text-xl">Pixelcraft AI</span>
@@ -40,7 +36,6 @@ export function Footer() {
               <Link
                 href="#instagram"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                legacyBehavior
               >
                 <div>
                   <Instagram className="h-5 w-5" />
@@ -50,7 +45,6 @@ export function Footer() {
               <Link
                 href="#facebook"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                legacyBehavior
               >
                 <div>
                   <Facebook className="h-5 w-5" />
@@ -60,7 +54,6 @@ export function Footer() {
               <Link
                 href="#youtube"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                legacyBehavior
               >
                 <div>
                   <Youtube className="h-5 w-5" />
@@ -70,7 +63,6 @@ export function Footer() {
               <Link
                 href="#github"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                legacyBehavior
               >
                 <div>
                   <Github className="h-5 w-5" />
